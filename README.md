@@ -18,11 +18,11 @@ Una sola app para: **Hoy** (agenda del día y checklist), **Agenda** (calendario
 2. Crea un repositorio nuevo llamado `yabiz` (**Public**: GitHub Pages es gratis en repos públicos. En el código no hay ningún dato tuyo; tus datos están protegidos en Firebase).
 3. En esta carpeta ejecuta:
    ```bash
-   git remote add origin https://github.com/JavierVericat-ITB2425/yabiz.git
+   git remote add origin https://github.com/JavierVericat-ITB2425/Yabiz.git
    git push -u origin main
    ```
 4. En GitHub, dentro del repo: **Settings → Pages → Branch: `main` / `(root)` → Save**.
-   En 1–2 minutos la app estará en `https://javiervericat-itb2425.github.io/yabiz/`.
+   En 1–2 minutos la app estará en `https://javiervericat-itb2425.github.io/Yabiz/`.
 
 ### 2. Crear la base de datos gratis (Firebase)
 
@@ -89,7 +89,7 @@ Se crea un calendario **Yabiz** en tu Google Calendar con los colores de cada á
 Todo el código está en GitHub. En cualquier PC:
 
 ```bash
-git clone https://github.com/JavierVericat-ITB2425/yabiz.git
+git clone https://github.com/JavierVericat-ITB2425/Yabiz.git
 ```
 
 Abre esa carpeta en Claude Code y pide los cambios. Después ejecuta `git push` y la web se actualiza sola en todos tus dispositivos.

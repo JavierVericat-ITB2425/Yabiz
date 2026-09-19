@@ -30,7 +30,11 @@ export function emit() {
 }
 export function useStore() {
   const [, force] = useState(0)
-  useEffect(() => { const f = () => force(x => x + 1); listeners.add(f); return () => listeners.delete(f) }, [])
+  useEffect(() => {
+    const f = () => force(x => x + 1); listeners.add(f)
+    f() // por si el estado cambió antes de empezar a escuchar (p. ej. la sesión respondió muy rápido)
+    return () => listeners.delete(f)
+  }, [])
   return S
 }
 export const onDataChange = fn => changeHooks.push(fn)

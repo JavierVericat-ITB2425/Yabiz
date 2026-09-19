@@ -11,5 +11,5 @@ export const CONFIG = {
   },
   // Déjalo en true solo para crear tu cuenta la primera vez. Después ponlo en false:
   // desaparece el botón "Crear cuenta" y nadie más puede registrarse desde la app.
-  allowSignup: true,
+  allowSignup: false,
 }

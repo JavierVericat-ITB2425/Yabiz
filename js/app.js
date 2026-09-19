@@ -1,6 +1,7 @@
 import { html, useState, useEffect } from './lib.js'
 import { S, useStore, auth } from './store.js'
 import { Icon } from './components.js'
+import { CONFIG } from './config.js'
 import { EditorHost } from './editors.js'
 import { Home } from './views/home.js'
 import { Agenda } from './views/agenda.js'
@@ -52,8 +53,8 @@ function Login() {
     <input class="inp" type="password" autocomplete=${f.mode === 'in' ? 'current-password' : 'new-password'} placeholder="Contraseña" value=${f.pass} onInput=${e => setF({ ...f, pass: e.target.value })} required />
     ${f.err && html`<p class="neg small">${f.err}</p>`}
     <button class="btn primary wide" disabled=${f.busy}>${f.mode === 'in' ? 'Entrar' : 'Crear mi cuenta'}</button>
-    <button type="button" class="btn ghost wide" onClick=${() => setF({ ...f, mode: f.mode === 'in' ? 'up' : 'in', err: '' })}>
-      ${f.mode === 'in' ? 'Primera vez: crear cuenta' : 'Ya tengo cuenta'}</button>
+    ${CONFIG.allowSignup !== false && html`<button type="button" class="btn ghost wide" onClick=${() => setF({ ...f, mode: f.mode === 'in' ? 'up' : 'in', err: '' })}>
+      ${f.mode === 'in' ? 'Primera vez: crear cuenta' : 'Ya tengo cuenta'}</button>`}
     ${f.mode === 'in' && html`<button type="button" class="link small" onClick=${async () => { if (!f.email) return setF({ ...f, err: 'Escribe tu email arriba' }); await auth.reset(f.email.trim()); setF({ ...f, err: 'Te he enviado un email para cambiar la contraseña' }) }}>He olvidado la contraseña</button>`}
   </form></div>`
 }

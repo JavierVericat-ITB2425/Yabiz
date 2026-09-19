@@ -1,4 +1,4 @@
-# Yabiz: tu organizador personal
+﻿# Yabiz: tu organizador personal
 
 Una sola app para: **Hoy** (agenda del día y checklist), **Agenda** (calendario con eventos, rutinas, exámenes y tareas por colores), **Tareas** (con prioridades P1–P4), **Dinero** (cuentas, gastos, negocios, stock de Wallapop y gastos fijos), **Uni** (asignaturas, notas y apuntes), **Diario** y **Metas**.
 
@@ -18,11 +18,11 @@ Una sola app para: **Hoy** (agenda del día y checklist), **Agenda** (calendario
 2. Crea un repositorio nuevo llamado `yabiz` (**Public**: GitHub Pages es gratis en repos públicos. En el código no hay ningún dato tuyo; tus datos están protegidos en Firebase).
 3. En esta carpeta ejecuta:
    ```bash
-   git remote add origin https://github.com/TU_USUARIO/yabiz.git
+   git remote add origin https://github.com/JavierVericat-ITB2425/yabiz.git
    git push -u origin main
    ```
 4. En GitHub, dentro del repo: **Settings → Pages → Branch: `main` / `(root)` → Save**.
-   En 1–2 minutos la app estará en `https://TU_USUARIO.github.io/yabiz/`.
+   En 1–2 minutos la app estará en `https://javiervericat-itb2425.github.io/yabiz/`.
 
 ### 2. Crear la base de datos gratis (Firebase)
 
@@ -32,7 +32,7 @@ Una sola app para: **Hoy** (agenda del día y checklist), **Agenda** (calendario
 4. En Firestore → pestaña **Reglas**: pega el contenido de [`firestore.rules`](firestore.rules) y pulsa **Publicar**.
 5. **Configuración del proyecto (⚙️) → General → Tus apps → icono `</>` (Web)** → nombre `yabiz` → Registrar.
    Copia los valores de `firebaseConfig` en [`js/config.js`](js/config.js).
-6. En **Authentication → Configuración → Dominios autorizados**, añade `TU_USUARIO.github.io`.
+6. En **Authentication → Configuración → Dominios autorizados**, añade `javiervericat-itb2425.github.io`.
 7. Sube el cambio:
    ```bash
    git commit -am "Configurar Firebase" && git push
@@ -89,7 +89,7 @@ Se crea un calendario **Yabiz** en tu Google Calendar con los colores de cada á
 Todo el código está en GitHub. En cualquier PC:
 
 ```bash
-git clone https://github.com/TU_USUARIO/yabiz.git
+git clone https://github.com/JavierVericat-ITB2425/yabiz.git
 ```
 
 Abre esa carpeta en Claude Code y pide los cambios. Después ejecuta `git push` y la web se actualiza sola en todos tus dispositivos.
